@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.item {
+  width: calc(33.7% - 32px);
+  margin-right: 32px;
+  margin-bottom: 32px;
+  border: 1px solid #eeeeee;
+}
+
+.item:nth-child(3n) {
+  width: calc(33.7% - 32px);
+  margin-right: 0;
+}
+
+.item-img {
+  width: 100%;
+}
