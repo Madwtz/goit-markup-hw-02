@@ -27,11 +27,9 @@
 .contact-section ul {
   list-style-type: none;
   display: flex;
+  justify-content: center;
 }
-/*.second-navigation ul {
-  display: flex;
-  flex-direction: column;
-}*/
+
 .item-logo {
   font-size: 26px;
   font-family: var(--logo-font-family);
@@ -40,16 +38,31 @@
 .item-web-span {
   color: var(--second-color);
 }
-
-.container-header a {
+.main-navigation li {
+  margin-left: 40px;
+}
+.contact-section li {
+  margin-left: 40px;
+}
+.second-navigation-container ul {
+  display: flex;
   color: #000000;
-  text-decoration: none;
+  list-style-type: none;
+
+  margin-left: 292px;
+}
+.second-navigation-container li {
+  margin-right: 40px;
+  width: 120px;
+  height: 38px;
+  border-radius: 4px;
+  margin-top: 174px;
 }
 
-.wrapper {
+.wrapper-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 1170;
   justify-content: space-evenly;
 }
 .item {
