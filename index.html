@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="modern-normalize.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <header class="global-header">
+    <header class="container-header">
       <nav class="item-logo">
         <a href="webstudio.html">
           <span class="item-web-span">Web</span>Studio</a
@@ -16,9 +21,7 @@
       </nav>
       <div class="main-navigation">
         <ul>
-          <li>
-            <a href="https://madwtz.github.io/goit-markup-hw-03/">Studio</a>
-          </li>
+          <li><a href="studio.html">Studio</a></li>
           <li>
             <a href="https://madwtz.github.io/goit-markup-hw-02/">Portfolio</a>
           </li>
@@ -27,8 +30,16 @@
       </div>
       <div class="contact-section">
         <ul>
-          <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li><a href="tel:+12127724140">+1 212-772-4140</a></li>
+          <li>
+            <a href="mailto:info@devstudio.com">
+              <i data-feather="mail"></i>info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:+12127724140">
+              <i data-feather="smartphone"></i>+1 212-772-4140</a
+            >
+          </li>
         </ul>
       </div>
     </header>
@@ -107,23 +118,71 @@
         </div>
       </div>
     </section>
-    <footer class="item-footer">
-      <nav class="main-navigation">
-        <a class="item-logo" href="webstudio.html"
+    <footer class="footer-section">
+      <nav>
+        <a href="webstudio.html"
           ><span class="item-web-span">Web</span>Studio</a
         >
       </nav>
-      <address class="item-address">
+      <address class="footer-address">
         <ul>
           <li>
             <a href="https://goo.gl/maps/jNuW9V26wf5GWSnc8" target="_blank">
-              695 Park Ave, NY 10065, USA
+              694 Park Ave, NY 10064, USA
             </a>
           </li>
           <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li><a href="tel:+12127724140">+1 212-772-4150 </a></li>
+          <li><a href="tel:+12127724140">+1 212-772-4140 </a></li>
         </ul>
       </address>
+      <div class="container container-find-us">
+        <div class="container-find-us">
+          <h5>Find us on</h5>
+          <div class="icons-list">
+            <a
+              href="https://www.instagram.com/"
+              class="icon"
+              aria-label="Instagram"
+            >
+              <svg>
+                <use href="icons.svg/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.twitter.com/"
+              class="icon"
+              aria-label="Twitter"
+            >
+              <svg>
+                <use href="icons.svg/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              class="icon"
+              aria-label="Facebook"
+            >
+              <svg>
+                <use href="icons.svg/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              class="icon"
+              aria-label="Linkedin"
+            >
+              <svg>
+                <use href="icons.svg/symbol-defs.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

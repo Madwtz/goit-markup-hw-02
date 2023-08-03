@@ -1,17 +1,38 @@
 :root {
   --accent-color: #2f303a;
   --link-color: #757575;
+  --main-color: #fff;
+  --second-color: #2196f3;
+  --social-icon-color: #afb1b8;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   --logo-font-family: "raleway", "sans-serif";
   --heading-font-family: "roboto", "sans-serif";
 }
-.global-header {
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 1600px;
+  margin: 0 auto;
+  height: 2930px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  transition: color var(--transition);
+}
+
+.container-header {
   background-color: var(--main-color);
-  padding: 40px 50px 40px 100px;
+  padding-right: 225px;
+  padding-left: 215px;
   display: flex;
 }
-.global-header,
+.container-header,
 .main-navigation a,
-.global-header .main-navigation a:visited,
+.container-header .main-navigation a:visited,
 .contact-section {
   color: var(--link-color);
   font-size: 0.875em;
@@ -22,41 +43,64 @@
   letter-spacing: normal;
   text-transform: uppercase;
 }
-
-.main-navigation ul,
 .contact-section ul {
-  list-style-type: none;
   display: flex;
-  justify-content: center;
+  gap: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-
+.contact-section svg {
+  display: flex;
+  width: 16px;
+  height: 12px;
+}
+.main-navigation ul {
+  display: flex;
+  gap: 50px;
+  padding-right: 330px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 .item-logo {
   font-size: 26px;
   font-family: var(--logo-font-family);
   font-weight: 700;
+  padding-top: 37px;
 }
 .item-web-span {
   color: var(--second-color);
 }
-.main-navigation li {
-  margin-left: 40px;
+
+.container-header a {
+  color: #000000;
+  text-decoration: none;
 }
-.contact-section li {
-  margin-left: 40px;
+.second-navigation-container {
+  list-style-type: none;
+  margin-top: 94px;
+  margin-bottom: 50px;
+  margin-left: 327px;
 }
 .second-navigation-container ul {
   display: flex;
-  color: #000000;
-  list-style-type: none;
-
-  margin-left: 292px;
 }
 .second-navigation-container li {
-  margin-right: 40px;
-  width: 120px;
+  margin-right: 30px;
+  width: fit-content;
   height: 38px;
+  color: #212121;
+  text-align: center;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: 0.48px;
   border-radius: 4px;
-  margin-top: 174px;
+  background: #2196f3;
+  /* shadow-middle */
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper-container {
@@ -70,6 +114,25 @@
   margin-right: 32px;
   margin-bottom: 32px;
   border: 1px solid #eeeeee;
+  border: 1px solid #eee;
+  background: #fff;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+.item h4,
+.item p {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.item p {
+  width: 322px;
+  color: #757575;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 187.5% */
+  letter-spacing: 0.48px;
 }
 
 .item:nth-child(3n) {
@@ -102,12 +165,71 @@
   font-weight: 700;
 }
 
-.global-header a {
-  color: #000000;
-  text-decoration: none;
+.icons svg {
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+}
+.icons-list {
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+  justify-content: center;
 }
 
-.global-header ul {
-  list-style-type: none;
-  display: inline-flex;
+.icons-list .icon {
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  color: var(--social-icon-color);
+}
+
+.icons-list .icon:hover,
+.icons-list .icon:focus {
+  color: var(--main-color);
+  fill: var(--second-color);
+}
+.icons-list .icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-section {
+  background-color: var(--accent-color);
+  height: 251px;
+  width: 1600px;
+  padding-top: 60px;
+}
+.footer-address {
+  padding-left: 215px;
+}
+.footer-address li,
+a {
+  color: var(--main-color);
+
+  text-decoration: none;
+}
+.footer-section nav {
+  font-size: 26px;
+  font-family: var(--logo-font-family);
+  font-weight: 700;
+  padding-left: 215px;
+}
+.footer-section nav span {
+  padding-left: 40px;
+}
+
+.container-find-us h5 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  text-align: center;
 }
