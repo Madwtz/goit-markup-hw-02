@@ -43,6 +43,9 @@ a {
   letter-spacing: normal;
   text-transform: uppercase;
 }
+.contact-section li a {
+  display: flex;
+}
 .contact-section ul {
   display: flex;
   gap: 40px;
@@ -75,18 +78,13 @@ a {
   color: #000000;
   text-decoration: none;
 }
-.second-navigation-container {
-  list-style-type: none;
-  margin-top: 94px;
-  margin-bottom: 50px;
-  margin-left: 327px;
-}
-.second-navigation-container ul {
+
+.album-container ul {
   display: flex;
+  gap: 8px;
 }
-.second-navigation-container li {
-  margin-right: 30px;
-  width: fit-content;
+.album-container li {
+  padding: 6px 22px;
   height: 38px;
   color: #212121;
   text-align: center;
@@ -97,27 +95,42 @@ a {
   line-height: 26px; /* 162.5% */
   letter-spacing: 0.48px;
   border-radius: 4px;
-  background: #2196f3;
-  /* shadow-middle */
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  background: #f5f4fa;
 }
-
+.album-container .all-text {
+  width: 64px;
+}
+.album-container .web-text {
+  width: 120px;
+}
+.album-container .apps-text {
+  width: 83px;
+}
+.album-container .design-text {
+  width: 96px;
+}
+.album-container .marketing-text {
+  width: 121px;
+}
+.album-container {
+  display: flex;
+  width: 1600px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
 .wrapper-container {
   display: flex;
   flex-wrap: wrap;
-  width: 1170;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .item {
-  width: calc(33.7% - 32px);
   margin-right: 32px;
   margin-bottom: 32px;
   border: 1px solid #eeeeee;
   border: 1px solid #eee;
   background: #fff;
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 .item h4,
 .item p {
@@ -133,26 +146,6 @@ a {
   font-weight: 400;
   line-height: 30px; /* 187.5% */
   letter-spacing: 0.48px;
-}
-
-.item:nth-child(3n) {
-  width: calc(33.7% - 32px);
-  margin-right: 0;
-}
-
-.item-img {
-  width: 100%;
-}
-.item-footer {
-  background-color: var(--accent-color);
-}
-.item-footer ul {
-  list-style-type: none;
-}
-
-.item-footer a {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 .item-web-span {
@@ -202,6 +195,10 @@ a {
   height: 251px;
   width: 1600px;
   padding-top: 60px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .footer-address {
   padding-left: 215px;
