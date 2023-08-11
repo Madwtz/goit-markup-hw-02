@@ -27,11 +27,11 @@ ul a:hover {
   text-decoration: none;
   transition: color var(--transition);
 }
-
-.main-navigation {
+.link {
   position: relative;
+  transition: color var(--transition);
 }
-.main-navigation .studio-page:hover::after {
+.link:hover::after {
   content: "";
   position: absolute;
   width: 42px;
@@ -39,10 +39,16 @@ ul a:hover {
   flex-shrink: 0;
   border-radius: 2px;
   background: var(--second-color);
-  bottom: 0;
+  bottom: -47px;
   display: flex;
 }
-.main-navigation .portofolio-page:hover::after {
+
+.link:hover,
+.link:focus,
+.link .portofolio-page::after {
+  color: var(--second-color);
+}
+.portofolio-page:hover::after {
   content: "";
   position: absolute;
   width: 58px;
@@ -50,20 +56,34 @@ ul a:hover {
   flex-shrink: 0;
   border-radius: 2px;
   background: var(--second-color);
-  bottom: 0;
+  bottom: -47px;
   display: flex;
 }
-.main-navigation .contacts-page:hover::after {
+.portofolio-page::after {
+  color: var(--second-color);
   content: "";
   position: absolute;
-  width: 59px;
+  width: 58px;
   height: 4px;
   flex-shrink: 0;
   border-radius: 2px;
   background: var(--second-color);
-  bottom: 0;
+  bottom: -47px;
   display: flex;
 }
+.contacts-page:hover::after {
+  color: var(--second-color);
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--second-color);
+  bottom: -47px;
+  display: flex;
+}
+
 .contact-section ul a:hover,
 .contact-section ul a:focus {
   color: var(--second-color);
@@ -93,7 +113,6 @@ ul a:hover {
 .main-navigation a,
 .container-header .main-navigation a:visited,
 .contact-section {
-  color: var(--link-color);
   font-size: 0.875em;
   font-family: var(--heading-font-family);
   font-style: normal;
@@ -292,6 +311,9 @@ a {
 }
 .animation {
   position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
 }
 .item:hover .overlay-text {
   height: 100%;
@@ -309,25 +331,19 @@ a {
   overflow: hidden;
 }
 .overlay-text {
-  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  flex-shrink: 0;
-  position: absolute;
-  transition: 0.5s ease;
+  background-color: var(--second-color);
   transform: translateY(100%);
-}
-
-.overlay-text p {
-  color: #fff;
-  font-family: var(--text-font-family);
+  transition: 250ms ease-in-out;
   font-size: 18px;
-  font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.54px;
-  text-align: start;
-  padding: 30px;
+  font-weight: 400;
+  text-align: center;
+  padding: 63px 24px 91px 24px;
+  color: var(--main-color);
 }
